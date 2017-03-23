@@ -8,7 +8,7 @@ script:
 # build image
 - docker build -t fdubuisson/influxdb-rpi .
 # test image
-- docker run fdubuisson/influxdb-rpi influxd --version
+- docker run fdubuisson/influxdb-rpi influxd version
 # push image
 - >
   if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
